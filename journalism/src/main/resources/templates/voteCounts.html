@@ -1,0 +1,7 @@
+<div class="vote-info">
+    <p th:text="'Upvotes: ' + ${upvoteCount} + ', Downvotes: ' + ${downvoteCount}"></p>
+    <button th:if="${not upvoted}" th:onclick="'voteNews(\'' + ${newsId} + '\', \'up\')'">Upvote</button>
+    <button th:if="${not downvoted}" th:onclick="'voteNews(\'' + ${newsId} + '\', \'down\')'">Downvote</button>
+    <button th:if="${upvoted}" disabled>Upvoted</button>
+    <button th:if="${downvoted}" disabled>Downvoted</button>
+</div>
